@@ -1,0 +1,9 @@
+/*
+title: ¿Puedo contestar a una opinión?
+description: ¿Puedo contestar a una opinión? - Evaluaciones
+*/
+
+Las evaluaciones no se pueden modificar una vez han sido publicadas, y tampoco se pueden eliminar.
+**A tener en cuenta:** Nuestra comunidad se basa en opiniones honestas y transparentes.
+
+Eliminamos cualquier opinión ofensiva o denigrante, y el autor corre el riesgo de ser expulsado de la plataforma.

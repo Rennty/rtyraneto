@@ -1,0 +1,1 @@
+/*title: ¿Cómo puedo cambiar mis datos personales o los datos del carnet de conducir?description: ¿Cómo puedo cambiar mis datos personales o los datos del carnet de conducir? - Otras Preguntas*/Para actualizar tu nombre, apellidos, fecha de nacimiento, número de carnet u otro dato personal, ve a [tu cuenta](/es/browse/account) > Modificar tu perfil.

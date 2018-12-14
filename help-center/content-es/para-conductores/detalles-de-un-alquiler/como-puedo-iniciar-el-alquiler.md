@@ -1,0 +1,1 @@
+/*title: ¿Cómo puedo iniciar el alquiler? - Para Conductoresdescription: ¿Cómo puedo iniciar el alquiler? - Detalles De Un Alquiler*/En el caso de un alquiler clásico, no hay ninguna acción específica en Rennty para iniciar el alquiler. El propietario se encarga de proporcionar el contrato; solo tienes que completarlo juntos y firmarlo.

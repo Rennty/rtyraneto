@@ -1,0 +1,1 @@
+/*title: ¿Cómo puedo iniciar el alquiler? - Para Propietariosdescription: ¿Cómo puedo iniciar el alquiler? - El Proceso De Alquiler*/* El alquiler se inicia automáticamente en la fecha y hora estipuladas en el sistema.Deberás entregar el contrato de alquiler al conductor y cumplimentarlo junto a él. Es imprescindible la firma del conductor por imperativo del seguro

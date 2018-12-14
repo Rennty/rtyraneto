@@ -1,0 +1,1 @@
+/*title: ¿Cómo puedo finalizar el alquiler? - Para Conductoresdescription: ¿Cómo puedo finalizar el alquiler? - Detalles De Un Alquiler*/En el caso de un alquiler clásico, en Rennty no hay ninguna acción específica para finalizar el alquiler. Tan solo tendrás que completar el contrato junto con el propietario al final del alquiler y firmarlo.

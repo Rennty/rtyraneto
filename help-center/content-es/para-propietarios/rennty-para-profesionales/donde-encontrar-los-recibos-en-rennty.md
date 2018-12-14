@@ -1,0 +1,1 @@
+/*title: ¿Dónde encontrar los recibos en Rennty?description: ¿Dónde encontrar los recibos en Rennty? - Rennty Para Profesionales*/Puedes acceder a  los documentos desde tu cuenta, en el apartado [tus pagos](/es/browse/billing/payout):* A los recibos, que detallan las transacciones financieras correspondientes a tus alquileres, para ayudarte con tu contabilidad.

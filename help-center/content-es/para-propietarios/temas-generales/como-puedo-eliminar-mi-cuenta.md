@@ -1,0 +1,1 @@
+/*title: ¿Cómo puedo eliminar mi cuenta? - Temas Generalesdescription: ¿Cómo puedo eliminar mi cuenta? - Temas Generales*/Para eliminar tu cuenta, ve a [tu cuenta](/es/browse/account) Configuración de la cuenta Eliminar cuenta. Ten en cuenta que la eliminación de tu cuenta es definitiva.

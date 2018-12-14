@@ -1,0 +1,1 @@
+/*title: ¿Tengo que pedir un cheque o un boucher de verificación al conductor?description: ¿Tengo que pedir un cheque o un boucher de verificación al conductor? - El Proceso De Alquiler*/•	No, no es necesario. Rennty guarda los detalles de pago del conductor y por tanto puede cargar su cuenta en caso de requerirse.

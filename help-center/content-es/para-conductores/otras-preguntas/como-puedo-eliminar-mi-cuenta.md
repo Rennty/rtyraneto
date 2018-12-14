@@ -1,0 +1,1 @@
+/*title: ¿Cómo puedo eliminar mi cuenta?description: ¿Cómo puedo eliminar mi cuenta? - Otras Preguntas*/Para eliminar tu cuenta, ve a [editar perfil](/es/browse/account) > Eliminar cuenta. Es importante que sepas que la eliminación de tu cuenta es definitiva por lo que, si lo haces, perderás el acceso.
