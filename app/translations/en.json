@@ -40,7 +40,8 @@
   },
 
   "home": {
-    "searchKnowledgeBase": "Search the knowledge base"
+    "searchKnowledgeBase": "Search the knowledge base",
+    "helpCenter": "Help Center"
   },
 
   "login": {

@@ -36,9 +36,92 @@ function route_wildcard (config) {
     fs.readFile(file_path, 'utf8', function (error, content) {
 
       if (error) {
-        error.status = '404';
-        error.message = config.lang.error['404'];
-        return next(error);
+        // HACK HERE!!!
+        file_path = file_path + '/index.md';
+
+        fs.readFile(file_path, 'utf8', function (error, content) {
+
+          if (error) {
+            error.status = '404';
+            error.message = config.lang.error['404'];
+            return next(error);
+          }
+
+          // Process Markdown files
+          if (path.extname(file_path) === '.md') {
+
+            // Meta
+            var meta = contentProcessors.processMeta(content);
+            meta.custom_title = meta.title;
+            if (!meta.title) { meta.title = contentProcessors.slugToTitle(file_path); }
+            meta.index = file_path.indexOf('index') != -1;
+
+            // Content
+            content = contentProcessors.stripMeta(content);
+            content = contentProcessors.processVars(content, config);
+
+            var template = meta.template || 'page';
+            var render   = template;
+
+            // Check for "/edit" suffix
+            if (file_path_orig.indexOf(suffix, file_path_orig.length - suffix.length) !== -1) {
+
+              // Edit Page
+              if ((config.authentication || config.authentication_for_edit) && !req.session.loggedIn) {
+                res.redirect('/login');
+                return;
+              }
+              render  = 'edit';
+
+            } else {
+
+              // Render Table of Contents
+              if (config.table_of_contents) {
+                var tableOfContents = toc(content);
+                if (tableOfContents.content) {
+                  content = '#### Table of Contents\n' + tableOfContents.content + '\n\n' + content;
+                }
+              }
+
+              // Render Markdown
+              marked.setOptions({
+                langPrefix : ''
+              });
+              content = marked(content);
+
+            }
+
+            var pageList = remove_image_content_directory(config, contentsHandler(slug, config));
+
+            var loggedIn = ((config.authentication || config.authentication_for_edit) ? req.session.loggedIn : false);
+
+            var canEdit = false;
+            if (config.authentication || config.authentication_for_edit) {
+              canEdit = loggedIn && config.allow_editing;
+            } else {
+              canEdit = config.allow_editing;
+            }
+
+            return res.render(render, {
+              config        : config,
+              pages         : build_nested_pages(pageList),
+              meta          : meta,
+              content       : content,
+              body_class    : template + '-' + contentProcessors.cleanString(slug),
+              last_modified : utils.getLastModified(config, meta, file_path),
+              lang          : config.lang,
+              loggedIn      : loggedIn,
+              username      : (config.authentication ? req.session.username : null),
+              canEdit       : canEdit,
+              locale: {
+                es: true
+              }
+            });
+
+          }
+        });
+
+        return;
       }
 
       // Process Markdown files

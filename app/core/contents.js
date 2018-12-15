@@ -32,7 +32,7 @@ function handler (activePageSlug, config) {
     files: []
   });
 
-  files.forEach(filePath => {
+  files.forEach((filePath, currentIndex) => {
 
     const shortPath = path.normalize(filePath).replace(content_dir, '').trim();
     const fileSlug = shortPath.split('\\').join('/');
@@ -78,6 +78,7 @@ function handler (activePageSlug, config) {
         title: dirMetadata.title || _s.titleize(_s.humanize(path.basename(shortPath))),
         show_on_home: dirMetadata.show_on_home ? (dirMetadata.show_on_home === 'true') : config.show_on_home_default,
         is_index: false,
+        is_first: currentIndex === 0,
         is_directory: true,
         active: activePageSlug.startsWith('/' + fileSlug),
         class: 'category-' + contentProcessors.cleanString(shortPath),
@@ -109,6 +110,7 @@ function handler (activePageSlug, config) {
 
         const val = _.find(filesProcessed, item => item.slug === dir);
         val.files.push({
+          'index_md': fileSlug.indexOf('index.md') > -1,
           slug: slug,
           title: meta.title ? meta.title : contentProcessors.slugToTitle(slug),
           show_on_home: meta.show_on_home ? (meta.show_on_home === 'true') : config.show_on_home_default,
