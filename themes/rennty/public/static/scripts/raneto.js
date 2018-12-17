@@ -115,7 +115,7 @@
     });
 
     // get translations first, then register save handlers
-    $.getJSON("/es/ayudar/translations/" + $("html").prop("lang") + ".json", null, function (lang) {
+    $.getJSON("/raneto/es/translations/" + $("html").prop("lang") + ".json", null, function (lang) {
 
       // Save Page
       $(".save-page").click(function () {
