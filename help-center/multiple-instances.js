@@ -26,8 +26,16 @@ const appEs = raneto(Object.assign({}, config, { base_url : '/raneto/es', locale
 
 // Create the main app
 const mainApp = express();
+mainApp.get('/raneto', function (req, res) {
+  return res.redirect(301, '/raneto/es');
+});
 mainApp.use('/raneto/en', appEn);
 mainApp.use('/raneto/es', appEs);
+
+mainApp.use(function (err, req, res, next) {
+  console.error(err.stack)
+  res.status(404).send('are you looking for something??!');
+});
 
 // Load the HTTP Server
 const server = mainApp.listen(3000, function () {
